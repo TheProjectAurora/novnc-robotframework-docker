@@ -26,7 +26,7 @@ BEHAVIOR:
 ## Clean up:
 * Execute [stop environment](https://github.com/TheProjectAurora/novnc-robotframework-katas#stop-environment)
 * Delete WebDemo folder from ./EXERCISES
-* Delete images: `docker image rm robotframework-infra-katas_novnc-with-robotframework robotframework-infra-katas_webdemo`
+* Delete images: `docker image rm novnc-robotframework-katas_webdemo novnc-robotframework-katas_novnc-with-robotframework`
 
 # Known problems (Existing features)
 * Copy-Paste between noVNC<->HOST happened by using noVNC desctop left side menu (click arrow in center of noVNC window) and open clipboard by using it icon in menu. This is a textbox where you should paste your copy from HOST and then it could be pasted to noVNC side. Copying from noVNC to HOST happened by using same method but vise-versa way.

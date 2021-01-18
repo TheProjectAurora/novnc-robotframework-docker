@@ -16,6 +16,7 @@ services:
     volumes:
       - ./infra/novnc-with-robotframework/ssl:/etc/nginx/ssl
       - ./EXERCISES:/home/coder/EXERCISES
+      # SET BACKROUND IMAGES:
       #- ./infra/novnc-with-robotframework/backrounds/Original.jpg:/usr/local/share/doro-lxde-wallpapers/bg1.jpg
       #- ./infra/novnc-with-robotframework/backrounds/Original.jpg:/usr/local/share/doro-lxde-wallpapers/bg2.jpg
       #- ./infra/novnc-with-robotframework/backrounds/Original.jpg:/usr/local/share/doro-lxde-wallpapers/bg3.jpg
