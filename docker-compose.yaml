@@ -1,0 +1,38 @@
+version: '2'
+services:
+  novnc-with-robotframework:
+    build:
+      context: ./infra/novnc-with-robotframework
+      dockerfile: Dockerfile
+    hostname: noVNClinux
+    cpu_count: 2
+    mem_reservation: 2G
+    cap_add:
+      #Google Chrome require this: https://github.com/jessfraz/dockerfiles/issues/65
+      - SYS_ADMIN
+    ports:
+      - '443:443'
+      #- '80:80'
+    volumes:
+      - ./infra/novnc-with-robotframework/ssl:/etc/nginx/ssl
+      - ./EXERCISES:/home/coder/EXERCISES
+      #- ./infra/novnc-with-robotframework/backrounds/Original.jpg:/usr/local/share/doro-lxde-wallpapers/bg1.jpg
+      #- ./infra/novnc-with-robotframework/backrounds/Original.jpg:/usr/local/share/doro-lxde-wallpapers/bg2.jpg
+      #- ./infra/novnc-with-robotframework/backrounds/Original.jpg:/usr/local/share/doro-lxde-wallpapers/bg3.jpg
+      #- ./infra/novnc-with-robotframework/backrounds/Original.jpg:/usr/local/share/doro-lxde-wallpapers/bg4.jpg
+    environment:
+      - SSL_PORT=443
+      - USER=coder
+      - PASSWORD=coderpw
+      - HTTP_PASSWORD=coderpw
+      #- RESOLUTION=1920x1080
+      #- X11VNC_ARGS=-multiptr
+  
+  webdemo:
+    build:
+      context: ./infra/webdemo
+      dockerfile: Dockerfile
+    ports:
+      - '7272:7272'
+    volumes:
+      - ./EXERCISES:/root/EXERCISES
