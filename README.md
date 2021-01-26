@@ -1,5 +1,5 @@
 # Purpose:
-POC of Robot Framework [katas](https://en.wikipedia.org/wiki/Kata) that could be used as baseline how training/demo/R&D envs could be created. Use Robot Framework official WebDemo material from they github repo as example: https://github.com/robotframework/WebDemo
+POC of Robot Framework [katas](https://en.wikipedia.org/wiki/Kata) that could be used as baseline how dockerized training/demo/R&D envs could be created. Offer full X-windows experience that is usable over browser. Use Robot Framework official WebDemo material from they github repo as example: https://github.com/robotframework/WebDemo
 
 # USAGE:
 
