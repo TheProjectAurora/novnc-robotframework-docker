@@ -25,6 +25,9 @@ RUN pip3 install --no-cache-dir \
   && wget -q https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip \
   && unzip chromedriver_linux64.zip -d /bin && rm -f chromedriver_linux64.zip
 
+# GENERATE SSL CERT
+COPY novnc_openssl.cnf /etc/nginx/ssl/novnc_openssl.cnf
+RUN openssl req -x509 -config /etc/nginx/ssl/novnc_openssl.cnf -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
 
 EXPOSE 443
 
