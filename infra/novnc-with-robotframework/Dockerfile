@@ -20,9 +20,11 @@ RUN pip3 install --no-cache-dir \
   docutils \
   robotframework \
   robotframework-seleniumlibrary \
-  && wget -q https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-linux64.tar.gz \
+  # Firefox geckodriver: https://github.com/mozilla/geckodriver/releases
+  && wget -q https://github.com/mozilla/geckodriver/releases/download/v0.29.0/geckodriver-v0.29.0-linux64.tar.gz \
   && tar -C /bin -xvf geckodriver-v*-linux64.tar.gz && rm -f geckodriver-v*-linux64.tar.gz\
-  && wget -q https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip \
+  # Chrome driver: https://chromedriver.chromium.org/downloads
+  && wget -q https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip \
   && unzip chromedriver_linux64.zip -d /bin && rm -f chromedriver_linux64.zip
 
 # GENERATE SSL CERT
