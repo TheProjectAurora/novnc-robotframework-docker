@@ -7,6 +7,8 @@ services:
     hostname: noVNClinux
     cpu_count: 2
     mem_reservation: 2G
+    # CHROME chrash without this. If crashing continue then monitor /dev/shm usage inside of noVNC by 
+    # executing 'watch -n 1 "df -h /dev/shm/"' in LXTerminal parallel when you browsing internet with chrome. 
     # https://github.com/fcwu/docker-ubuntu-vnc-desktop/issues/205#issuecomment-782880997
     # https://developers.google.com/web/tools/puppeteer/troubleshooting#tips
     shm_size: 1G
