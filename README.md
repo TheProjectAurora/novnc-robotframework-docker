@@ -11,10 +11,10 @@ BEHAVIOR:
 * NoVNC session opened to browser and offer full linux desctop
 * Left bottom corner of noVNC desctop is arrow where opens a main menu of linux desktop
 * GoTo: 'System Tools' =>  'LXTerminal' => Open shell to you
-* Execute robot tests with different browsers with GUI by writing to LXTerminal:
+* GUI execution by writing to LXTerminal (Require X-windows e.g. with noVNC):
   * Firefox: `robot -v BROWSER:firefox EXERCISES/webdemo_selenium2library/login_tests`
   * Chrome: `robot -v BROWSER:chrome EXERCISES/webdemo_selenium2library/login_tests`
-* Execute robot tests with different browsers with headless by writing to LXTerminal:
+* Headless execution by writing to LXTerminal (working also directly in container without noVNC)
   * Firefox: `robot -v BROWSER:headlessfirefox EXERCISES/webdemo_selenium2library/login_tests`
   * Chrome: `robot -v BROWSER:headlesschrome EXERCISES/webdemo_selenium2library/login_tests`
 * Now robot framework execution should start with testcases from: https://github.com/robotframework/WebDemo/tree/master/login_tests
