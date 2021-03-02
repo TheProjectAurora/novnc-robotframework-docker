@@ -28,7 +28,7 @@ BEHAVIOR:
     * Chrome:       `robot -v HEADLESS:true -v BROWSER:chromium EXERCISES/webdemo_browser_library/`
     * Safari&Edge:  `robot -v HEADLESS:true -v BROWSER:webkit EXERCISES/webdemo_browser_library/`
 * Selenium2Library testcases location: https://github.com/robotframework/WebDemo/tree/master/login_tests
-* Browser Library testcases location: https://github.com/robotframework/WebDemo/tree/master/login_tests
+* Browser Library testcases location: https://github.com/TheProjectAurora/novnc-robotframework-docker/tree/master/EXERCISES/webdemo_browser_library/login_tests
 
 >**FYI**: Google Chrome eat a lot of cpu&mem so firefox browser is recommended to be used.
 
