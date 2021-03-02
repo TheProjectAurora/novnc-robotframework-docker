@@ -68,6 +68,10 @@ RUN set -xe \
     && apt -qq update \
     && apt install -qq --no-install-recommends --allow-unauthenticated -y \
       nodejs \
+      # webkit require also
+      libgstreamer-plugins-bad1.0-0 \
+      libenchant1c2a \
+      libgles2 \
     && apt clean && rm -rf /var/lib/apt/lists/* \
     && pip3 install --no-cache-dir \
       robotframework-browser \
