@@ -8,7 +8,7 @@ Library           Browser
 
 *** Variables ***
 ${SERVER}         webdemo:7272
-${BROWSER}        Firefox
+${BROWSER}        webkit
 ${HEADLESS}       false
 ${DELAY}          0
 ${VALID USER}     demo
@@ -19,9 +19,9 @@ ${ERROR URL}      http://${SERVER}/error.html
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    url=${LOGIN URL}    browser=${BROWSER}    headless=${HEADLESS}
+    New Browser    browser=${BROWSER}    headless=${HEADLESS}    slowMo=${DELAY}
+    New Page    ${LOGIN URL}
     #Maximize Browser Window
-    #Set Selenium Speed    ${DELAY}
     Login Page Should Be Open
 
 Login Page Should Be Open
