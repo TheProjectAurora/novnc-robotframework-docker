@@ -1,2 +1,6 @@
+log.html
+report.html
+output.xml
+playwright-log.txt
 EXERCISES/*
-!EXERCISES/empty
+!EXERCISES/webdemo_browser_library

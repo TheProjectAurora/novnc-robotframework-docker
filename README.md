@@ -11,10 +11,24 @@ BEHAVIOR:
 * NoVNC session opened to browser and offer full linux desctop
 * Left bottom corner of noVNC desctop is arrow where opens a main menu of linux desktop
 * GoTo: 'System Tools' =>  'LXTerminal' => Open shell to you
-* Execute robot tests with different browsers by writing to LXTerminal:
-  * Firefox: `robot -v BROWSER:firefox EXERCISES/webdemo/login_tests`
-  * Chrome: `robot -v BROWSER:chrome EXERCISES/webdemo/login_tests`
-* Now robot framework execution should start with testcases from: https://github.com/robotframework/WebDemo/tree/master/login_tests
+* GUI execution by writing to LXTerminal (Require X-windows e.g. with noVNC):
+  * Selenium2Library:
+    * Firefox: `robot -v BROWSER:firefox EXERCISES/webdemo_selenium2library/`
+    * Chrome:  `robot -v BROWSER:chrome EXERCISES/webdemo_selenium2library/`
+  * Browser library:
+    * Firefox:      `robot -v BROWSER:firefox EXERCISES/webdemo_browser_library/`
+    * Chrome:       `robot -v BROWSER:chromium EXERCISES/webdemo_browser_library/`
+    * Safari&Edge:  `robot -v BROWSER:webkit EXERCISES/webdemo_browser_library/`
+* Headless execution by writing to LXTerminal (working also directly in container without noVNC)
+  * Selenium2Library headless:
+    * Firefox: `robot -v BROWSER:headlessfirefox EXERCISES/webdemo_selenium2library/`
+    * Chrome:  `robot -v BROWSER:headlesschrome EXERCISES/webdemo_selenium2library/`
+  Browser library headdless:
+    * Firefox:      `robot -v HEADLESS:true -v BROWSER:firefox EXERCISES/webdemo_browser_library/`
+    * Chrome:       `robot -v HEADLESS:true -v BROWSER:chromium EXERCISES/webdemo_browser_library/`
+    * Safari&Edge:  `robot -v HEADLESS:true -v BROWSER:webkit EXERCISES/webdemo_browser_library/`
+* Selenium2Library testcases location: https://github.com/robotframework/WebDemo/tree/master/login_tests
+* Browser Library testcases location: https://github.com/TheProjectAurora/novnc-robotframework-docker/tree/master/EXERCISES/webdemo_browser_library/login_tests
 
 >**FYI**: Google Chrome eat a lot of cpu&mem so firefox browser is recommended to be used.
 
